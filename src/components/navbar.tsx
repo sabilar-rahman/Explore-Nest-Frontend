@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -17,49 +18,22 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/src/components/icons";
-import { TUser, useCurrentUser } from "../redux/featuresApi/auth/authSlice";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import {
+  logout,
+  TUser,
+  useCurrentUser,
+} from "../redux/featuresApi/auth/authSlice";
 
 export const Navbar = () => {
-
   const dispatch = useAppDispatch();
-
 
   const user = useAppSelector(useCurrentUser) as TUser;
 
   const handleLogout = () => {
     dispatch(logout());
   };
-
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
@@ -95,36 +69,27 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          {/* <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link> */}
           <ThemeSwitch />
         </NavbarItem>
 
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
 
-        <NavbarItem className="hidden md:flex">
-          {/* <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Login
-          </Button> */}
-
-          <Button className="text-sm font-normal text-default-600 bg-default-100">
-            <Link href="/login">Login</Link>
-          </Button>
-        </NavbarItem>
+        {!user ? (
+          <NavbarItem className="hidden md:flex">
+            <Button className="text-sm font-normal text-default-600 bg-default-100">
+              <Link href="/login">Login</Link>
+            </Button>
+          </NavbarItem>
+        ) : (
+          <NavbarItem className="hidden md:flex">
+            <Button
+              onClick={handleLogout}
+              className="text-sm font-normal text-default-600 bg-default-100"
+            >
+              logout
+            </Button>
+          </NavbarItem>
+        )}
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
