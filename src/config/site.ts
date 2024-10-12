@@ -9,7 +9,6 @@ export const siteConfig = {
       href: "/",
     },
     
-
     {
       label: "About",
       href: "/about",
@@ -18,7 +17,16 @@ export const siteConfig = {
       label: "Contact",
       href: "/contact",
     },
+    {
+      title: "Dashboard",
+      href: "/admin/users",
+      secure: true,
+    },
   ],
+
+
+
+
   navMenuItems: [
     {
       label: "Profile",

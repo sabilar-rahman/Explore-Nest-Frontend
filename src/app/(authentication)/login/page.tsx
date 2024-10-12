@@ -39,7 +39,8 @@ const LoginPage = () => {
       user.image = res.data.image;
       dispatch(setUser({ user: user, token: res.token }));
       localStorage.setItem("token", res.token);
-      toast.success("Logged in", { id: toastId, duration: 2000 });
+
+      toast.success("Logged in Successfully", { id: toastId, duration: 2000 });
       router.push("/");
     } catch (error) {
       const err = error as TErrorResponse;
@@ -113,9 +114,9 @@ const LoginPage = () => {
 
         {/* Footer */}
         <p className="text-center text-sm text-gray-400 mt-5">
-          Don&apos;t have an account?{" "}
+          Don't have an account?{" "}
           <Link href="/signup" className="text-blue-500 hover:underline">
-            Sign up
+            Sign up Here
           </Link>
         </p>
         {/* <p className="text-center text-sm text-gray-400 mt-5">
