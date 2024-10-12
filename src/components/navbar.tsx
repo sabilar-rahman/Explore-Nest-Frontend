@@ -25,8 +25,21 @@ import {
   SearchIcon,
   Logo,
 } from "@/src/components/icons";
+import { TUser, useCurrentUser } from "../redux/featuresApi/auth/authSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+
 
 export const Navbar = () => {
+
+  const dispatch = useAppDispatch();
+
+
+  const user = useAppSelector(useCurrentUser) as TUser;
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
   const searchInput = (
     <Input
       aria-label="Search"

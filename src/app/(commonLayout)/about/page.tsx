@@ -1,6 +1,6 @@
 "use client";
 
-import { title } from "@/src/components/primitives";
+// import { title } from "@/src/components/primitives";
 import Aos from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
