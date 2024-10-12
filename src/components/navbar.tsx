@@ -27,8 +27,6 @@ import {
 } from "@/src/components/icons";
 
 export const Navbar = () => {
-
-
   const searchInput = (
     <Input
       aria-label="Search"
@@ -56,7 +54,9 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             {/* <Logo /> */}
-            <p className="font-bold text-inherit">ExploreNest</p>
+            <p className="font-bold text-inherit text-violet-700">
+              ExploreNest
+            </p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -65,7 +65,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}
@@ -94,10 +94,7 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
 
-
-
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
-
 
         <NavbarItem className="hidden md:flex">
           {/* <Button
@@ -111,7 +108,9 @@ export const Navbar = () => {
             Login
           </Button> */}
 
-          <Button className="text-sm font-normal text-default-600 bg-default-100">Login</Button>
+          <Button className="text-sm font-normal text-default-600 bg-default-100">
+            <Link href="/login">Login</Link>
+          </Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -126,7 +125,6 @@ export const Navbar = () => {
 
       <NavbarMenu>
         {/* {searchInput} */}
-
 
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navItems.map((item, index) => (
@@ -147,8 +145,6 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div>
-
-
       </NavbarMenu>
     </NextUINavbar>
   );

@@ -11,18 +11,19 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
+        <span className={title()}>Greetings from &nbsp;</span>
         <br />
-        <span className={title()}>
+        <span className={title({ color: "violet" })}>Explore Nest!&nbsp;</span>
+        <br />
+        {/* <span className={title()}>
           websites regardless of your design experience.
-        </span>
+        </span> */}
         <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
+        Your adventure begins here! Dive into our curated travel tips and destination guides designed to make your next trip extraordinary. Whether you're a seasoned traveler or a first-time explorer, we're here to help you discover new horizons and create unforgettable experiences.
         </div>
       </div>
 
-      <div className="flex gap-3">
+      {/* <div className="flex gap-3">
         <Link
           isExternal
           className={buttonStyles({
@@ -42,12 +43,12 @@ export default function Home() {
           <GithubIcon size={20} />
           GitHub
         </Link>
-      </div>
+      </div> */}
 
       <div className="mt-8">
         <Snippet hideCopyButton hideSymbol variant="bordered">
           <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
+          Let the exploration begin!
           </span>
         </Snippet>
       </div>
