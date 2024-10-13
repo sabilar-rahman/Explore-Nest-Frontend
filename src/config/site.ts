@@ -7,15 +7,18 @@ export const siteConfig = {
     {
       label: "Home",
       href: "/",
+      secure: false,
     },
     
     {
       label: "About",
       href: "/about",
+      secure: false,
     },
     {
       label: "Contact",
       href: "/contact",
+      secure: false,
     },
     {
       title: "Dashboard",
