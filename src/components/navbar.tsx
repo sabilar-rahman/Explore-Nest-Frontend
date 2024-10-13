@@ -46,7 +46,7 @@ export const links = [
     secure: true,
   },
   {
-    title: "Admin Dashboard",
+    title: "Dashboard",
     href: "/admin/users",
     secure: true,
   },
@@ -103,7 +103,7 @@ export const Navbar = () => {
             if (item.secure && !user) return null;
 
             // Hide the Dashboard link if the user role is not admin
-            if (item.title === "Admin Dashboard" && user?.role !== "admin")
+            if (item.title === "Dashboard" && user?.role !== "admin")
               return null;
 
             return (
