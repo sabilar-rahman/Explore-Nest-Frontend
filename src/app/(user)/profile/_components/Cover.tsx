@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { useAppSelector } from "@/src/redux/hooks";
 import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
 import { useUpdateUserInfoMutation } from "@/src/redux/featuresApi/user";
+import CustomModal from "@/src/components/userInterface/CustomModal";
 type TFormValues = {
   image: File | null; // Allowing image to be either a File or null
 };

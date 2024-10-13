@@ -1,6 +1,6 @@
 "use client";
-import { TUser, useCurrentUser } from "@/src/redux/features/auth/authSlice";
-import { useUpvoteMutation } from "@/src/redux/features/vote";
+import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
+import { useUpvoteMutation } from "@/src/redux/featuresApi/vote";
 import { useAppSelector } from "@/src/redux/hooks";
 import { TErrorResponse } from "@/src/types";
 import { FaAnglesUp } from "react-icons/fa6";

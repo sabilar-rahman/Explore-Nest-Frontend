@@ -1,17 +1,18 @@
 "use client";
-import { useGetUserInfoQuery } from "@/src/redux/features/user";
+import { useGetUserInfoQuery } from "@/src/redux/featuresApi/user";
 import Cover from "./Cover";
 import { TPost, TUserDetails } from "@/src/types";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
-import PostCard from "@/src/components/ui/PostCard";
+import PostCard from "@/src/components/userInterface/PostCard";
 import { formatDateTime } from "@/src/utils/date";
 import { Suspense, useState } from "react";
-import { useGetPostByAuthorQuery } from "@/src/redux/features/post";
+
 import FollowingModal from "./FollowingModal";
 import FollowerModal from "./FollowerModal";
 import Subscribe from "@/src/components/actions/Subscribe";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
 import LoaderSpinner from "@/src/components/userInterface/LoaderSpinner";
+import { useGetPostByAuthorQuery } from "@/src/redux/featuresApi/post";
 // import Loader from "@/src/components/ui/Loader";
 
 const UserData = () => {
