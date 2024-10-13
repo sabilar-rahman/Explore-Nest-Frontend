@@ -14,14 +14,14 @@ import { useAppSelector } from "@/src/redux/hooks";
 import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
 import { useUpdateUserInfoMutation } from "@/src/redux/featuresApi/user";
 type TFormValues = {
-  avatar: File | null; // Allowing avatar to be either a File or null
+  image: File | null; // Allowing image to be either a File or null
 };
 type TProps = {
   userDetails: TUserDetails;
 };
 
 const initialValues: TFormValues = {
-  avatar: null,
+  image: null,
 };
 
 const Cover = ({ userDetails }: TProps) => {
@@ -31,8 +31,8 @@ const Cover = ({ userDetails }: TProps) => {
   const handleSubmit = async (values: TFormValues) => {
     const toastId = toast.loading("Photo Changing please wait!");
     const formData = new FormData();
-    if (values.avatar) {
-      formData.append("avatar", values.avatar);
+    if (values.image) {
+      formData.append("image", values.image);
     }
     const userData = {
       name: userDetails.name,
@@ -67,7 +67,7 @@ const Cover = ({ userDetails }: TProps) => {
         className="w-full h-[400px] object-cover"
       />
       <Image
-        src={userDetails?.avatar}
+        src={userDetails?.image}
         alt="profile"
         height={300}
         width={300}
@@ -89,19 +89,19 @@ const Cover = ({ userDetails }: TProps) => {
                 <div className="space-y-5 ">
                   <div className="space-y-1">
                     <label
-                      htmlFor="avatar"
+                      htmlFor="image"
                       className="block font-medium text-gray-700 dark:text-slate-100"
                     >
                       Profile Picture
                     </label>
                     <input
                       accept="image/*"
-                      id="avatar"
+                      id="image"
                       type="file"
                       className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
                       onChange={(e) => {
                         const file = e.target.files ? e.target.files[0] : null;
-                        setFieldValue("avatar", file);
+                        setFieldValue("image", file);
                       }}
                     />
                   </div>
