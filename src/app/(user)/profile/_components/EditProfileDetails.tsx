@@ -1,6 +1,5 @@
 import FormikInput from "@/src/components/formik/FormikInput";
 import { useUpdateUserInfoMutation } from "@/src/redux/featuresApi/user";
-// import { useUpdateUserInfoMutation } from "@/src/redux/features/user";
 import { TErrorResponse, TUserDetails } from "@/src/types";
 import { Button } from "@nextui-org/button";
 import { Form, Formik } from "formik";

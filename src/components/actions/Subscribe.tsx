@@ -1,7 +1,7 @@
 "use client";
-import { TUser, useCurrentUser } from "@/src/redux/features/auth/authSlice";
-import { useGetPostByAuthorQuery } from "@/src/redux/features/post";
-import { useSubscribeMutation } from "@/src/redux/features/user";
+import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
+import { useGetPostByAuthorQuery } from "@/src/redux/featuresApi/post";
+import { useSubscribeMutation } from "@/src/redux/featuresApi/user";
 import { useAppSelector } from "@/src/redux/hooks";
 import { TErrorResponse, TPost } from "@/src/types";
 import { ReactNode } from "react";

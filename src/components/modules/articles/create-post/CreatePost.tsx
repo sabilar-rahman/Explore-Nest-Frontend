@@ -1,10 +1,10 @@
 "use client";
-import { TUser, useCurrentUser } from "@/src/redux/features/auth/authSlice";
+import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
 import { useAppSelector } from "@/src/redux/hooks";
 import Image from "next/image";
 import CustomEditor from "./CustomEditor";
 import { useState, useEffect } from "react";
-import CustomModal from "@/src/components/ui/CustomModal";
+import CustomModal from "@/src/components/userInterface/CustomModal";
 import Link from "next/link";
 
 const CreatePost = () => {
@@ -34,7 +34,7 @@ const CreatePost = () => {
           <div className="flex items-center gap-5">
             <Link href={`/profile`}>
               <Image
-                src={user?.avatar || "/anonymous-user.png"}
+                src={user?.image || "/anonymous-user.png"}
                 height={100}
                 width={100}
                 alt={"user"}

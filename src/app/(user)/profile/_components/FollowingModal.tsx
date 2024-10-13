@@ -1,9 +1,8 @@
-// import CustomModal from "@/src/components/ui/CustomModal";
+import CustomModal from "@/src/components/userInterface/CustomModal";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import { TUserFollowing } from "@/src/types";
-import CustomModal from "@/src/components/userInterface/CustomModal";
 
 interface FollowingModalProps {
   isOpen: boolean;

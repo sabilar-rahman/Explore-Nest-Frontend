@@ -1,5 +1,5 @@
 "use client";
-import { useUpdatePostMutation } from "@/src/redux/features/post";
+import { useUpdatePostMutation } from "@/src/redux/featuresApi/post";
 import { TErrorResponse, TPost } from "@/src/types";
 import { Button } from "@nextui-org/button";
 import { useState } from "react";
@@ -13,8 +13,9 @@ import {
   createPostValidationSchema,
   tagOptions,
 } from "../module/articles/create-post/CustomEditor";
+
 import Dropdown from "../formik/Dropdown";
-import TextEditor from "../formik/TextEditor";
+// import TextEditor from "../formik/TextEditor";
 
 type TProps = {
   postDetails: TPost;

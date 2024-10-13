@@ -8,11 +8,9 @@ import { useState } from "react";
 import { Form, Formik } from "formik";
 import { Button } from "@nextui-org/button";
 import { toast } from "sonner";
-// import { useUpdateUserInfoMutation } from "@/src/redux/features/user";
-// import { TUser, useCurrentUser } from "@/src/redux/features/auth/authSlice";
-import { useAppSelector } from "@/src/redux/hooks";
-import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
 import { useUpdateUserInfoMutation } from "@/src/redux/featuresApi/user";
+import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
+import { useAppSelector } from "@/src/redux/hooks";
 import CustomModal from "@/src/components/userInterface/CustomModal";
 type TFormValues = {
   image: File | null; // Allowing image to be either a File or null

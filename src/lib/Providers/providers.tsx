@@ -21,14 +21,14 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   return (
     <Provider store={store}>
       {/* Use PersistGate to delay rendering until persisted state is loaded */}
-      {/* <PersistGate loading={null} persistor={persistor}> */}
+       <PersistGate loading={null} persistor={persistor}> 
 
       <NextUIProvider navigate={router.push}>
         <Toaster />
         <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
       </NextUIProvider>
 
-      {/* </PersistGate> */}
+       </PersistGate> 
     </Provider>
   );
 }

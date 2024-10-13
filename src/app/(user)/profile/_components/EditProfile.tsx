@@ -1,10 +1,10 @@
-import CustomModal from "@/src/components/ui/CustomModal";
+import CustomModal from "@/src/components/userInterface/CustomModal";
 import { TUserDetails } from "@/src/types";
 import { useState } from "react";
 import { FaRegEdit } from "react-icons/fa";
 import EditProfileDetails from "./EditProfileDetails";
 import ChangePassword from "./ChangePassword";
-import CustomTab from "@/src/components/ui/CustomTab";
+import CustomTab from "@/src/components/userInterface/CustomTab";
 type TProps = {
   userData: TUserDetails;
 };

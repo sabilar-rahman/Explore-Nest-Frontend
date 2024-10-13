@@ -1,6 +1,6 @@
 "use client";
-import { TUser, useCurrentUser } from "@/src/redux/features/auth/authSlice";
-import { useFollowMutation } from "@/src/redux/features/follow";
+import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
+import { useFollowMutation } from "@/src/redux/featuresApi/follow";
 import { useAppSelector } from "@/src/redux/hooks";
 import { TErrorResponse, TPostAuthor } from "@/src/types";
 import { Button } from "@nextui-org/button";

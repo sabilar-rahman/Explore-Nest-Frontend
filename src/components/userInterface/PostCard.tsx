@@ -2,8 +2,7 @@
 import { TPost } from "@/src/types";
 import Image from "next/image";
 import { FaRegCommentAlt } from "react-icons/fa";
-import UpVote from "../module/articles/UpVote";
-import DownVote from "../module/articles/DownVote";
+
 import Link from "next/link";
 import { formatDateTime } from "@/src/utils/date";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
@@ -12,6 +11,8 @@ import DeletePost from "./DeletePost";
 import EditPost from "./EditPost";
 import { useEffect } from "react";
 import AOS from "aos";
+import UpVote from "../modules/articles/UpVote";
+import DownVote from "../modules/articles/DownVote";
 
 type TPostCard = {
   data: TPost[];

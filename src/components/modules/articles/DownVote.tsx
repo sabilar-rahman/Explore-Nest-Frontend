@@ -2,9 +2,9 @@ import { FaAnglesDown } from "react-icons/fa6";
 import { TVoteProps } from "./UpVote";
 import { toast } from "sonner";
 import { TErrorResponse } from "@/src/types";
-import { useDownvoteMutation } from "@/src/redux/features/vote";
+import { useDownvoteMutation } from "@/src/redux/featuresApi/vote";
 import { useAppSelector } from "@/src/redux/hooks";
-import { TUser, useCurrentUser } from "@/src/redux/features/auth/authSlice";
+import { TUser, useCurrentUser } from "@/src/redux/featuresApi/auth/authSlice";
 
 const DownVote = ({ votes, id }: TVoteProps) => {
   const user = useAppSelector(useCurrentUser) as TUser;
