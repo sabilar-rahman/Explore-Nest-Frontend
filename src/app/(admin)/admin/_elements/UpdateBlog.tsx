@@ -1,6 +1,9 @@
+
 import Dropdown from "@/src/components/formik/Dropdown";
-import CustomModal from "@/src/components/ui/CustomModal";
-import { useUpdatePostMutation } from "@/src/redux/features/post";
+import CustomModal from "@/src/components/userInterface/CustomModal";
+
+import { useUpdatePostMutation } from "@/src/redux/featuresApi/post";
+
 import { TErrorResponse } from "@/src/types";
 import { Button } from "@nextui-org/button";
 import { Form, Formik } from "formik";

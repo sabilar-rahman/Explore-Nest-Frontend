@@ -41,7 +41,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "black" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="container mx-auto ">{children}</div>
 
           {/* footer */}

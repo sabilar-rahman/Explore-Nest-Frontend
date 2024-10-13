@@ -9,6 +9,7 @@ import { useAppDispatch } from "@/src/redux/hooks";
 import { useRouter } from "next/navigation";
 import { useGetUsersQuery } from "@/src/redux/featuresApi/admin";
 import { logout } from "@/src/redux/featuresApi/auth/authSlice";
+import UpdateUser from "./UpdateUser";
 
 const UsersData = () => {
   const dispatch = useAppDispatch();

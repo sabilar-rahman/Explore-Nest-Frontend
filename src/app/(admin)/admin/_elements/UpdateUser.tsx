@@ -1,6 +1,7 @@
 "use client";
+
 import Dropdown from "@/src/components/formik/Dropdown";
-import CustomModal from "@/src/components/ui/CustomModal";
+import CustomModal from "@/src/components/userInterface/CustomModal";
 import { useUpdateUserRoleMutation } from "@/src/redux/featuresApi/user";
 // import { useUpdateUserRoleMutation } from "@/src/redux/features/user";
 import { TErrorResponse } from "@/src/types";
