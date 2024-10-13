@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import SideBarLayout from "./_elements/SideBarLayout";
+import SideBarLayout from "./_components/SideBarLayout";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (

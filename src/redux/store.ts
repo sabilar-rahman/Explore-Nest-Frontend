@@ -14,12 +14,29 @@ import storage from "redux-persist/lib/storage";
 import baseApi from "./api/baseApi";
 import authSlice from "./featuresApi/auth/authSlice";
 
+
+// Fallback storage if localStorage is not available
+const createNoopStorage = () => ({
+  getItem(_key: string) {
+    return Promise.resolve(null);
+  },
+  setItem(_key: string, _value: any) {
+    return Promise.resolve();
+  },
+  removeItem(_key: string) {
+    return Promise.resolve();
+  },
+});
+
+
+
 const persistConfig = {
   key: "auth",
-  storage,
+  storage: typeof window !== "undefined" ? storage : createNoopStorage(),
 };
 
 const persistedAuthReducer = persistReducer(persistConfig, authSlice);
+
 
 export const store = configureStore({
   reducer: {

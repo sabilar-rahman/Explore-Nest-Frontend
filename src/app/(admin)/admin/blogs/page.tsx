@@ -2,7 +2,7 @@ import ErrorBoundary from "@/src/components/ErrorBoundary";
 
 import { Suspense } from "react";
 
-import BlogsData from "../_elements/BlogsData";
+import BlogsData from "../_components/BlogsData";
 import LoaderSpinner from "@/src/components/userInterface/LoaderSpinner";
 
 const page = () => {
